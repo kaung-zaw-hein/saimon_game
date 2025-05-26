@@ -131,21 +131,23 @@ const App = () => {
     <>
       <Toaster onClick={() => toast.dismiss()} />
       <main className=' w-screen h-screen bg-black flex flex-col px-5 py-10 justify-center items-center'>
+        <div className='min-h-30 w-full '>
           {level > 0 && (
-            <button
-              onClick={resetGame}
-              className="my-4 text-white text-xl border px-4 py-2 rounded hover:bg-white hover:text-black"
-            >
-              Restart Game
-            </button>
+              <button
+                onClick={resetGame}
+                className="my-4 text-white text-xl border px-4 py-2 rounded hover:bg-white hover:text-black"
+              >
+                Restart Game
+              </button>
           )}
-        <div className="w-full flex justify-between items-center mb-5">
-          { level > 0 ?(
-              <h1 className="text-3xl text-white font-bold">Level: {level}</h1>
-          ) 
-          : (<h1 className="text-4xl text-white font-bold">Press Any Key to Start</h1>)
-          }
-          <h1 className="text-3xl text-white font-bold">Highest: {highestLevel}</h1>
+          <div className="w-full flex justify-between items-center mb-5">
+            { level > 0 ?(
+                <h1 className="text-3xl text-white font-bold">Level: {level}</h1>
+            ) 
+            : (<h1 className="text-4xl text-white font-bold">Press Any Key to Start</h1>)
+            }
+            <h1 className="text-3xl text-white font-bold">Highest: {highestLevel}</h1>
+          </div>
         </div>
         <div className='grid grid-cols-2 w-full h-full gap-4 mt-10'>
           {colorLists.map((color) => (
