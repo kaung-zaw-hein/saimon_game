@@ -4,7 +4,7 @@ import { Toaster, toast } from 'react-hot-toast';
 import GameButton from './components/GameButton';
 import HeaderDisplay from './components/Header';
 
-
+ 
 const App = () => {
   const colorLists = ['green', 'red', 'yellow', 'blue'];
   
